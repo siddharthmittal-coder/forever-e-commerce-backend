@@ -1,7 +1,7 @@
 import express from 'express'
 import { placeOrderRazorPay,placeOrder,placeOrderStripe,userOrders,updateStatus,allOrders } from '../controllers/orderController.js'
 import authUser from '../middleware/auth.js';
-import adminAuth from '../middleware/adminAuth.js'
+import adminAuth from '../middleware/adminauth.js'
 const orderRoutes = express.Router();
 // payment feauters
 orderRoutes.post('/place',authUser,placeOrder)
